@@ -11,7 +11,7 @@ Final Project: Rectilinear Polygon Operations for Physical Design
 
 * An example input and output is provided in "exampleinput.txt", "exampleoutput.txt" respectively. All the format follows ICCAD Contest.
 
-Note: In this version, all the data structures and algorithms were designed by myself. Another version provided in another directory was done mostly by c++ boost library.
+Note: In this version, all the data structures were designed by myself, and algorithm was based on the cited paper[1]. Another version provided in another directory was done mostly by c++ boost library.
 
 Ref:
 
