@@ -54,7 +54,7 @@ vector<int> modify_matrix(vector < vector < char > > &arr, int w, int h ,int x, 
             ret.push_back(x-1);
             ret.push_back(y);
         }
-                //connect_component(arr, checkarray, w, h, x-1, y, arr[y][x-1]);
+               
     }
     if(x!=w-1)
     {
@@ -64,7 +64,7 @@ vector<int> modify_matrix(vector < vector < char > > &arr, int w, int h ,int x, 
             ret.push_back(x+1);
             ret.push_back(y);
         }
-                //connect_component(arr, checkarray, w, h, x+1, y, arr[y][x+1]);
+                
     }
     if(y!=0)
     {
@@ -74,7 +74,7 @@ vector<int> modify_matrix(vector < vector < char > > &arr, int w, int h ,int x, 
             ret.push_back(x);
             ret.push_back(y-1);
         }
-                //connect_component(arr, checkarray, w, h, x, y-1, arr[y-1][x]);
+                
     }
     if(y!=h-1)
     {
@@ -84,7 +84,7 @@ vector<int> modify_matrix(vector < vector < char > > &arr, int w, int h ,int x, 
             ret.push_back(x);
             ret.push_back(y+1);
         }
-                //connect_component(arr, checkarray, w, h, x, y+1, arr[y+1][x]);
+                
     }
     return ret;
 
@@ -92,12 +92,6 @@ vector<int> modify_matrix(vector < vector < char > > &arr, int w, int h ,int x, 
 
 vector<int> connect_component(const vector < vector < char > > &arr, vector < vector < int > > &checkarray, int w, int h ,int x, int y, const char temp)
 {
-
-
-        //if(check)
-          //  connected++;
-        //cout<<"good87"<<endl;
-        //int neighbor[8] = {-1, -1, -1, -1, -1, -1, -1, -1};
         vector<int> ret; 
         if(x!=0)
         {
@@ -107,7 +101,7 @@ vector<int> connect_component(const vector < vector < char > > &arr, vector < ve
                 ret.push_back(x-1);
                 ret.push_back(y);
             }
-                //connect_component(arr, checkarray, w, h, x-1, y, arr[y][x-1]);
+                
         }
         if(x!=w-1)
         {
@@ -117,7 +111,7 @@ vector<int> connect_component(const vector < vector < char > > &arr, vector < ve
                 ret.push_back(x+1);
                 ret.push_back(y);
             }
-                //connect_component(arr, checkarray, w, h, x+1, y, arr[y][x+1]);
+                
         }
         if(y!=0)
         {
@@ -127,7 +121,7 @@ vector<int> connect_component(const vector < vector < char > > &arr, vector < ve
                 ret.push_back(x);
                 ret.push_back(y-1);
             }
-                //connect_component(arr, checkarray, w, h, x, y-1, arr[y-1][x]);
+                
         }
         if(y!=h-1)
         {
@@ -137,15 +131,10 @@ vector<int> connect_component(const vector < vector < char > > &arr, vector < ve
                 ret.push_back(x);
                 ret.push_back(y+1);
             }
-                //connect_component(arr, checkarray, w, h, x, y+1, arr[y+1][x]);
+                
         }
 
         return ret;
-
-        //vector<int> neighbor = edge(x, y, w, h);
-        //cout<<"good9487"<<endl;
-
-	//vector<int>().swap(neighbor);
 }
 
 
@@ -168,9 +157,6 @@ int main(int argc, char* argv[]) {
     int x = atoi(argv[2]);
     int y = atoi(argv[3]);
     char change = *argv[4];
-    //int connected = 0;
-
-//    cout<<"good1"<<endl;
 
     vector < vector < char > > a(h, vector<char>(w,'0'));
 
@@ -181,10 +167,10 @@ int main(int argc, char* argv[]) {
             a[j-1][i] = *v[i].c_str();
     }
 
-    //cout<<"good2"<<endl;
+  
     
- 	  vector <string>().swap(Content);
-	  vector <string>().swap(v);
+    vector <string>().swap(Content);
+    vector <string>().swap(v);
     
     vector<int> modify;
     vector<int> modify_next;
@@ -211,27 +197,9 @@ int main(int argc, char* argv[]) {
     }
     vector<int>().swap(modify);
     vector<int>().swap(modify_next);
-
-
-
-//	v.shrink_to_fit();
-	//Content.shrink_to_fit();	
-/*    for(int i=0; i<h; i++)
-    {
-        for(int j=0; j<w; j++)
-            cout<<a[i][j];
-        cout<<endl;
-    }
-*/
-		
-
-    //int checkarray[h][w]={0};
     vector < vector < int > > checkarray(h, vector<int>(w, 0));
-    //cout<<"oops"<<endl;
-    long int dynamic_check = 0;  //use dynamic programming
-    //cout<<"good4"<<endl;
-    //cout<<"Content:"<<Content.capacity()<<endl;
-    //cout<<"v:"<<v.capacity()<<endl;
+
+    long int dynamic_check = 0; 
     long int connected = 0;
     while(dynamic_check < w*h)
     {
@@ -249,27 +217,13 @@ int main(int argc, char* argv[]) {
                 }
                 next.erase(next.begin(), next.begin() + 2); 
             }
-                //checkarray[dynamic_check] = 1;
             vector<int>().swap(next);
 
             ++connected;    
         }
     
         dynamic_check++;
-        //cout<<dynamic_check<<endl;
     }
-    //cout<<"good5"<<endl;
-
-  /*  cout<<connected<<endl;
-
-    for(int i=0; i<h; i++)
-    {
-        for(int j=0; j<w; j++)
-            cout<<checkarray[i][j];
-        cout<<endl;
-    }*/
-
-    //cout<<"good6"<<endl;
 
     string writeFile = argv[5];
     ofstream out(writeFile.c_str());
