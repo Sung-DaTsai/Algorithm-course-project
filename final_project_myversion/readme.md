@@ -1,7 +1,7 @@
 Final Project: Rectilinear Polygon Operations for Physical Design
 =================================================================
 
-* This problem is set by ICCAD in 2019, ICCAD's Contest Problem E in 2019.
+* This problem is ICCAD's Contest Problem E in 2019.
 
 * The detailed problem description is provided in "Problem-Rectilinear Polygon Operations for Physical Design.pdf", which could be downloaded from "http://iccad-contest.org/2019/tw/problems.html"
 
