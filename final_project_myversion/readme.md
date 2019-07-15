@@ -7,7 +7,7 @@ Final Project: Rectilinear Polygon Operations for Physical Design
 
 * Compile the source codes by typing "make"
 
-* Execute by typing "./myPolygon input_file output file"
+* Execute by typing "./myPolygon input_file output_file"
 
 * An example input and output is provided in "exampleinput.txt", "exampleoutput.txt" respectively. All the format follows ICCAD Contest.
 
