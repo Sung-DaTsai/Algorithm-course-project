@@ -1,7 +1,7 @@
 Programming Assignment 2: Optimal Wiring Topology for Electromigration Avoidance
 =================================================================
 
-* The detailed problem description is provided in "problem_EM.pdf", which could be * downloaded from "http://iccad-contest.org/2019/tw/problems.html"
+* The detailed problem description is provided in "problem_EM.pdf"
 
 * Compile the source codes by typing "make"
 
